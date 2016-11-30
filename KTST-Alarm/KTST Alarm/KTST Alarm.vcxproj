@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{14C87482-9812-4946-89CB-6B0457D1BE08}</ProjectGuid>
+    <RootNamespace>KTSTAlarm</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <TargetName>KTST-Alarm</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <TargetName>KTST-Alarm</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\KTST Alarm.ico" />
+    <None Include="res\KTSTAlarm.rc2" />
+    <None Include="res\Start.ico" />
+    <None Include="res\Stop.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ADOWrapper.h" />
+    <ClInclude Include="BlobData.h" />
+    <ClInclude Include="Channel.h" />
+    <ClInclude Include="CollectionChannel.h" />
+    <ClInclude Include="CollectionDevice.h" />
+    <ClInclude Include="Communicate.h" />
+    <ClInclude Include="DataCenter.h" />
+    <ClInclude Include="DBAccess.h" />
+    <ClInclude Include="DBDefine.h" />
+    <ClInclude Include="Define.h" />
+    <ClInclude Include="Device.h" />
+    <ClInclude Include="DeviceInfoDlg.h" />
+    <ClInclude Include="DeviceIO.h" />
+    <ClInclude Include="DeviceManageDlg.h" />
+    <ClInclude Include="KTST Alarm.h" />
+    <ClInclude Include="KTST AlarmDlg.h" />
+    <ClInclude Include="LoginDlg.h" />
+    <ClInclude Include="Registry.h" />
+    <ClInclude Include="RelayChannel.h" />
+    <ClInclude Include="RelayChannelSetupDlg.h" />
+    <ClInclude Include="RelayDevice.h" />
+    <ClInclude Include="RelayManageDlg.h" />
+    <ClInclude Include="RequestData.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SelectChannelDlg.h" />
+    <ClInclude Include="ServerSetupDlg.h" />
+    <ClInclude Include="SMSDevice.h" />
+    <ClInclude Include="SMSSetupDlg.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="XMLProfile.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ADOWrapper.cpp" />
+    <ClCompile Include="Channel.cpp" />
+    <ClCompile Include="CollectionChannel.cpp" />
+    <ClCompile Include="CollectionDevice.cpp" />
+    <ClCompile Include="Communicate.cpp" />
+    <ClCompile Include="DataCenter.cpp" />
+    <ClCompile Include="DBAccess.cpp" />
+    <ClCompile Include="Device.cpp" />
+    <ClCompile Include="DeviceInfoDlg.cpp" />
+    <ClCompile Include="DeviceIO.cpp" />
+    <ClCompile Include="DeviceManageDlg.cpp" />
+    <ClCompile Include="KTST Alarm.cpp" />
+    <ClCompile Include="KTST AlarmDlg.cpp" />
+    <ClCompile Include="LoginDlg.cpp" />
+    <ClCompile Include="Registry.cpp" />
+    <ClCompile Include="RelayChannel.cpp" />
+    <ClCompile Include="RelayChannelSetupDlg.cpp" />
+    <ClCompile Include="RelayDevice.cpp" />
+    <ClCompile Include="RelayManageDlg.cpp" />
+    <ClCompile Include="RequestData.cpp" />
+    <ClCompile Include="SelectChannelDlg.cpp" />
+    <ClCompile Include="ServerSetupDlg.cpp" />
+    <ClCompile Include="SMSDevice.cpp" />
+    <ClCompile Include="SMSSetupDlg.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="XMLProfile.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="KTST Alarm.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="KTST Alarm.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
